@@ -48,4 +48,19 @@ function capitalizeFirstLetter(input) {
     document.querySelector("#description").innerText = responseDescription;
 
     document.getElementById("condition").appendChild(imgElement);
+
+    //wind description
+    let responseWindSpeed=formattedData.list[0].wind.speed;
+    let responseWindDeg=formattedData.list[0].wind.deg;
+    let responseWindGust=formattedData.list[0].wind.gust;
+    document.querySelector("#windspeed").innerText=responseWindSpeed;
+    document.querySelector("#windgust").innerText=responseWindGust;
+    let arrow=document.querySelector("#directionArrow")
+    arrow.style.transform=`rotate(${responseWindDeg+180}deg)`;
+    arrow.style.transition = 'transform 0.5s ease';
+
+    //date and time
+    let responsedateTime=formattedData.list[0].dt_txt;
+    let formattedDate=responsedateTime.split(" ");
+    document.querySelector("#dateTime").innerText=formattedDate[0];
 }

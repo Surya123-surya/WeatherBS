@@ -175,6 +175,7 @@ h6{
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 5px;
+    text-align: center;
 }
 .windContent{
     display: flex;
@@ -195,7 +196,7 @@ h6{
     padding: 5px;
 }
 .windSpeed .mph .mph1 h6{
-    font-size: 3.5rem;
+    font-size: 2rem;
 }
 .mph{
     display: flex;
@@ -217,7 +218,7 @@ font-size: 1rem;
 }
 .windDirection h5{
     position: absolute;
-   bottom: 105px;
+   bottom: 90px;
    left: 22px;
    font-size: 1rem;
    font-weight: 300;
