@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherAPI</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <div class="sidecontainer">
+        <div class="searchContainer">
+            <input type="text" class="searchInput" placeholder="Search for a city" oninput="capitalizeFirstLetter(this)"  >
+            <img src="./assets/images/searchIcon.png" alt="search" class="searchicon" onclick="fetchData()">
+        </div>
+        <div class="mainDataContainer">
+            <div class="dateTimeContainer">
+                <h6>10-22-2025 6:00 PM</h6>
+            </div>
+            <div class="tempContainer">
+                <div class="curTemp"><h6><span id="cityTemp">17</span>&deg;C </h6></div>
+                <div class="highLowTemp">
+                    <div class="highTemp"><h6>Highest <span id="cityHighTemp">33</span>&deg;C</h6></div>
+                    <div class="hr"></div>
+                    <div class="lowTemp"><h6>Lowest <span id="cityLowTemp">10</span>&deg;C</h6></div>
+                </div>
+            </div>  
+            <div class="rainContainer">
+                <div class="chance">
+                    <h6>Chance of Rain</h6>
+                    <div class="pop"><h6><span id="popRain">85</span>%</h6></div>
+                </div>
+                <div class="amount">
+                    <h6>Amount of Rain</h6>
+                    <p>(expected in 3hours)</p>
+                    <div class="mm"><h6><span id="mm">1.69</span>mm</h6></div>
+                </div>
+            </div>
+        </div>
+        <!--WIND container -->
+        <div class="windContainer">
+            <h6 class="windHeading">WIND</h6>
+              <div class="windContent">
+                 <div class="windSpeed">
+                    <div class="mph">
+                        <div class="speed mph1"><h6>3</h6></div>
+                        <div class="wind"><h6>MPH</h6><h6>Wind</h6></div>
+                    </div>
+                    <div class="hr"></div> 
+                    <div class="mph">
+                        <div class="gust mph1"><h6>9</h6></div>
+                        <div class="gusts"><h6>MPH</h6><h6>Gusts</h6></div>
+                    </div>
+                  </div>
+                  <div class="windDirection">
+                    <h5>Direction</h5>
+                    <div class="arrow"><img src="./assets/images/windDirection-Arrow.png" id="directionArrow"></div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- HERO section -->
+    <div class="herocontainer">
+        <div class="nav">
+            <H1>WeatherBS</H1>
+        </div>
+        <div class="main">
+            <div class="description"><h1 id="condition">Rainy</h1></div>
+            <div class="description"><h1 id="description">Strome with Heavy Rain</h1></div>
+        </div>
+    </div>
+
+
+
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

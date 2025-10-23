@@ -1,0 +1,9 @@
+@media screen and (max-width: 900px) {
+    body{
+        display: block ;
+       background-size: cover;
+    }
+    .sidecontainer{
+        width: 60%;
+    }
+}
