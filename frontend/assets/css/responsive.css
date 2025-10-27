@@ -2,8 +2,17 @@
     body{
         display: block ;
        background-size: cover;
+       background-repeat: repeat-y;
     }
     .sidecontainer{
         width: 60%;
+    }
+}
+@media screen and (max-width: 600px){
+    .sidecontainer{
+        width: 100%;
+    }
+    .main{
+        font-size: 1rem;
     }
 }

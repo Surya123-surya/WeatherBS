@@ -14,21 +14,29 @@ function capitalizeFirstLetter(input) {
    let formattedData = await fetchedData.json();
    //temp section
     let responseCityTemp=(formattedData.list[0].main.temp-273.15 ).toFixed(2);
+    let responseFeelsLike=(formattedData.list[0].main.feels_like-273.15 ).toFixed(2);
     let responseCityHighTemp=(formattedData.list[0].main.temp_max-273.15).toFixed(2) ;
     let responseCityLowTemp=(formattedData.list[0].main.temp_min-273.15 ).toFixed(2);
-    document.querySelector('#cityTemp').innerText=responseCityTemp;
+    document.getElementById('cityTemp').innerText=responseCityTemp;
+    document.querySelector('#cityTemp2').innerText=responseCityTemp;
+    document.querySelector('#feelsLike').innerText=responseFeelsLike;
     document.querySelector('#cityHighTemp').innerText=responseCityHighTemp;
     document.querySelector('#cityLowTemp').innerText=responseCityLowTemp;
 
     //rain section
-    if(formattedData.list[0].pop==0){
+    if(formattedData.list[0].pop==0 && formattedData.list[0].main.rain == undefined){
         document.querySelector("#popRain").innerText=0;
         document.querySelector("#mm").innerText=0;
 
     }
+    else if(formattedData.list[0].main.rain == undefined){
+      document.querySelector("#mm").innerText=0;
+      let responsePop=(formattedData.list[0].pop)*100;
+      document.querySelector("#popRain").innerText=responsePop;
+    }
     else{
         let responsePop=(formattedData.list[0].pop)*100;
-        let response3h=formattedData.list[0].rain["3h"];
+        let response3h=formattedData.list[0].rain['3h'];
         document.querySelector("#popRain").innerText=responsePop;
         document.querySelector("#mm").innerText=response3h;
     }
@@ -62,5 +70,9 @@ function capitalizeFirstLetter(input) {
     //date and time
     let responsedateTime=formattedData.list[0].dt_txt;
     let formattedDate=responsedateTime.split(" ");
+    let responseTime=formattedDate[1];
+   
     document.querySelector("#dateTime").innerText=formattedDate[0];
+
+    document.querySelector('#cityContent').innerText=`${cityName}, ${formattedDate[0]}, ${responseTime}`
 }
