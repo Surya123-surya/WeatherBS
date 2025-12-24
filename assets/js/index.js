@@ -76,3 +76,49 @@ function capitalizeFirstLetter(input) {
 
     document.querySelector('#cityContent').innerText=`${cityName}, ${formattedDate[0]}, ${responseTime}`
 }
+
+
+// to change background based on weather condition
+const condition = data.weather[0].main;
+const body = document.body;
+
+function setWeatherBackground(condition) {
+  switch (condition) {
+    case "Clear":
+      body.style.backgroundImage = "url('images/clear.jpg')";
+      break;
+
+    case "Clouds":
+      body.style.backgroundImage = "url('images/clouds.jpg')";
+      break;
+
+    case "Rain":
+      body.style.backgroundImage = "url('images/rain.jpg')";
+      break;
+
+    case "Snow":
+      body.style.backgroundImage = "url('images/snow.jpg')";
+      break;
+
+    case "Thunderstorm":
+      body.style.backgroundImage = "url('images/thunderstorm.jpg')";
+      break;
+
+    case "Drizzle":
+      body.style.backgroundImage = "url('images/drizzle.jpg')";
+      break;
+
+    case "Mist":
+    case "Fog":
+    case "Haze":
+      body.style.backgroundImage = "url('images/mist.jpg')";
+      break;
+
+    default:
+      body.style.backgroundImage = "url('images/default.jpg')";
+  }
+}
+
+// Example usage
+setWeatherBackground("Rain");
+setWeatherBackground(condition);  
