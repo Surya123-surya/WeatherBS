@@ -5,6 +5,7 @@
 }
 body{
     background-image: url(../images/ThunderAtNight.jpg);
+    /* background-color: black; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +13,7 @@ body{
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     width: 100vw;
-    color: #ffffffcd;
+    color: #ffffff;
     display: flex;
 }
 .sidecontainer{
@@ -81,8 +82,9 @@ h6{
     height: auto;
     padding: 5px;
     text-align: center;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
+    
 }
 /*Temp styling*/
 .tempContainer{
@@ -94,7 +96,7 @@ h6{
     /* background-color: rgb(255, 140, 0); */
     padding: 10px;
     gap: 10px;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
 }
 .curTemp h6{
@@ -119,7 +121,7 @@ h6{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
     padding: 10px;
 }
@@ -168,7 +170,7 @@ h6{
     padding: 10px;
 }   
 .windHeading{
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 5px;
@@ -185,7 +187,7 @@ h6{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
     /* padding: 10px; */
 }
@@ -207,7 +209,7 @@ font-size: 1rem;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255,255,255,0.1);
     position: relative;
     display: flex;
     justify-content: center;
@@ -221,6 +223,15 @@ font-size: 1rem;
    font-weight: 300;
   
 }
+.directionImg{
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    top: -35px;
+    /* left: 10px; */
+    right: -35px;
+    opacity: 0.7;
+}
 .windDirection #directionArrow{
     padding: 20px;
     text-align: center;
@@ -231,32 +242,40 @@ font-size: 1rem;
 /*Hero section*/
 .herocontainer{
     width: 75%;
-    height: 100%;
-    /* background-color: #fff; */
+    /* height: 100%; */
+   /* background-color: #fff; */
+   display: flex;
+   /* align-items: center; */
+   justify-content: center;
+   flex-direction: column;
+   padding: 10px;
+   /* gap: 10px; */
+   /* margin-top: 30px; */
   
 }
 .nav{
    padding: 10px;
-   margin: 30px 40px;
+   margin: 10px 40px  0px 40px;
 }
 .main{
     padding:10px;
-    margin: 20px 30px;
+    margin:0 30px;
     width: 100%;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    
 }
 /* city content */
 .content{
     display: inline-flex;
     align-items: center;
-    margin: 0 40px;
+    margin: 0 30px;
     flex-direction: column;
     height: auto;
-    width: auto;
-    backdrop-filter: blur(20px);
-    background-color: rgba(255,255,255,0.01);
+    width: 30%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255,255,255,0.1);
     border-radius: 30px;
-   padding: 30px;
+   padding: 10px;
 
 }
 .content #cityContent{
@@ -269,4 +288,107 @@ font-size: 1rem;
 }
 .dataTable td{
     font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* forecast design */
+.forecast{
+    width: 100%;
+    height: auto;
+    /* background-color: royalblue; */
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    /* gap: 10px; */
+    border-radius: 50px;
+}
+.forecast h6{
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+}
+.forecastIcon{
+    height: 50px;
+}
+
+.forecast-grid {
+    display: grid;
+    width: 90%;
+    /* height: auto; */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 10px;
+    /* margin-top: 20px; */
+}
+
+
+.forecastItem{
+    /* width: 45%; */
+    /* height: 90%; */
+    width: 75%;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    /* backdrop-filter: blur(3px); */
+    /* position: absolute; */
+}
+
+.forecast-grid .forecastItem .forecastTemp h6{
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.forecast-grid .forecastItem .forecastTemp .forecastCurTemp{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.forecast-grid .forecastItem h6{
+     font-size: 1rem;
+    font-weight: 600; 
+}
+
+.dayforecast{
+    width: 100%;
+    height: auto;
+    /* background-color: royalblue; */
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    /* gap: 10px; */
+    border-radius: 50px;
+}
+.dayforecast h6{
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+}
+.dayforecastIcon{
+    height: 50px;
+}
+
+.dayforecast-grid{
+     display: grid;
+    width: 90%;
+    /* height: auto; */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 10px;
+    /* margin-top: 20px; */
+}
+.dayforecast-grid .forecastItem .forecastTemp h6{
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.dayforecast-grid .forecastItem h6 { 
+    font-size: 1rem;
+    font-weight: 600;  
+}
+.dayforecast-grid .forecastItem .forecastTemp .dayforecastCurTemp{
+    font-size: 1.5rem;
+    font-weight: 700;
 }
