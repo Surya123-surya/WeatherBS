@@ -1,19 +1,39 @@
+
 @media screen and (max-width: 900px) {
     body{
-        display: block ;
+        display: block;
        background-size: cover;
        background-repeat: repeat-y;
     }
     .sidecontainer{
-        width: 60%;
+        width: 100%;
     }
-     .forecast-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .herocontainer{
+        width: 100%;
+    }
+    .content{
+        width: 40%;
+    }
+     /* .forecast-grid {
+        grid-template-columns: repeat(5, 1fr);
 }
      .dayforecast-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr); */
 }
+
+
+@media screen and (max-width:700px) {
+     .content{
+        width: 60%;
+    }
+    .forecast-grid {
+        grid-template-columns: repeat(3, 1fr); /* 1 column for small screens */
+    }
+    .dayforecast-grid {
+        grid-template-columns: repeat(3, 1fr); /* 1 column for small screens */
+    }
 }
+
 @media screen and (max-width: 600px){
     .sidecontainer{
         width: 100%;
@@ -21,25 +41,18 @@
     .main{
         font-size: 1rem;
     }
-}
-@media  screen and (max-width: 1200px) {
-    .forecast-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
-    }
-    .dayforecast-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
-    }
-    
-}
-@media screen and (max-width:700px) {
-    .forecast-grid {
-        grid-template-columns: repeat(2, 1fr); /* 1 column for small screens */
-    }
-    .dayforecast-grid {
-        grid-template-columns: repeat(2, 1fr); /* 1 column for small screens */
+    .content{
+        width: 50%;
     }
 }
+
 @media screen and (max-width:450px) {
+    .forecastResponsive{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .forecast-grid {
         grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
     }

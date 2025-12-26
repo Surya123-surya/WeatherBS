@@ -297,11 +297,11 @@ font-size: 1rem;
     height: auto;
     /* background-color: royalblue; */
     backdrop-filter: blur(3px);
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
     /* gap: 10px; */
     border-radius: 50px;
 }
@@ -326,7 +326,7 @@ font-size: 1rem;
 .forecastItem{
     /* width: 45%; */
     /* height: 90%; */
-    width: 75%;
+    width: auto;
     background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
     padding: 10px;
