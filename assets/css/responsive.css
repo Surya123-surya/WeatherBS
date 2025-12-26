@@ -27,6 +27,7 @@
         width: 60%;
     }
     .forecast-grid {
+        
         grid-template-columns: repeat(3, 1fr); /* 1 column for small screens */
     }
     .dayforecast-grid {
@@ -52,6 +53,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .forecast{
+        text-align: center;
+    }
+    .dayforecast{
+        text-align: center;
     }
     .forecast-grid {
         grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
